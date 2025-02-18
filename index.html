@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motor Glowing</title>
+    <title>Kilap Premium</title>
     <style>
         * {
             margin: 0;
@@ -12,129 +12,91 @@
             font-family: Arial, sans-serif;
         }
 
+        body {
+            background-color: #fff;
+            color: #333;
+        }
+
         /* Navbar */
         .navbar {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding: 1rem 5%;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background-color: #111;
+            color: white;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
         }
 
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
         .nav-links {
-            display: flex;
-            gap: 2rem;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #111;
+            flex-direction: column;
         }
 
         .nav-links a {
+            padding: 1rem;
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
+            color: white;
+            display: block;
+            text-align: center;
+        }
+
+        .nav-links.active {
+            display: flex;
         }
 
         /* Hero Section */
         .hero {
             padding: 120px 5% 60px;
-            background: linear-gradient(45deg, #f3f4f6, #fff);
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+            font-size: 2rem;
+            color: #000;
         }
 
         .hero p {
             color: #666;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 2rem;
+            margin: 1rem 0;
         }
 
-        .cta-button {
-            background-color: #FF6B00;
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            margin: 2rem 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        /* Platform Grid */
-        .platforms {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            padding: 2rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .platform-item {
-            background-color: #f8f9fa;
-            padding: 1rem;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: bold;
-            color: #444;
-        }
-
-        /* WA Button */
+        /* WhatsApp Button */
         .wa-button {
             position: fixed;
-            bottom: 2rem;
-            right: 2rem;
+            bottom: 1rem;
+            right: 1rem;
             background-color: #25D366;
             color: white;
             padding: 1rem;
             border-radius: 50px;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
             text-decoration: none;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .platforms {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .wa-button {
-                bottom: 1rem;
-                right: 1rem;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .menu-toggle {
-                display: none;
-            }
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">MOTOR GLOW</div>
+        <div class="logo">Kilap Premium</div>
+        <button class="menu-toggle">☰</button>
         <div class="nav-links">
             <a href="#products">Products</a>
             <a href="#partners">Our Partners</a>
@@ -143,26 +105,15 @@
             <a href="#careers">Careers</a>
             <a href="#news">News</a>
         </div>
-        <button class="menu-toggle">☰</button>
     </nav>
 
     <section class="hero">
         <h1>Motor Makin Glowing,<br>Jadi Pede dibawa Riding</h1>
-        <p>Selalu keliatan kinclong, terjangkau, pemakaian mudah, apalagi formula cairannya tahan lama, merawat motor jadi ngga ribet dan tak habis banyak. Dengan produk Kilap Premium yang beragam, bikin motormu jadi anti kusam.</p>
-        <button class="cta-button">BELI DISINI</button>
-        
-        <div class="platforms">
-            <div class="platform-item">Shopee</div>
-            <div class="platform-item">Tokopedia</div>
-            <div class="platform-item">TikTok Shop</div>
-            <div class="platform-item">Lazada</div>
-            <div class="platform-item">Bukalapak</div>
-            <div class="platform-item">Blibli</div>
-        </div>
+        <p>maaf kalo Flexing</p>
     </section>
 
     <a href="https://wa.me/628xxxxxx" class="wa-button">
-        <span>WA Admin</span>
+        <span>Chat with us</span>
     </a>
 
     <script>
@@ -171,16 +122,7 @@
         const navLinks = document.querySelector('.nav-links');
 
         menuToggle.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        });
-
-        // Menutup menu saat resize window
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                navLinks.style.display = 'flex';
-            } else {
-                navLinks.style.display = 'none';
-            }
+            navLinks.classList.toggle('active');
         });
     </script>
 </body>
