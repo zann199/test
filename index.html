@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4techwoks</title>
+    <title>4techworks</title>
     <style>
         * {
             margin: 0;
@@ -15,36 +15,56 @@
         /* Navbar */
         .navbar {
             display: flex;
-            justify-content: space-between;
-            padding: 1rem 5%;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+            background-color: #ff6b00;
+            width: 250px;
+            height: 100vh;
             position: fixed;
-            width: 100%;
             top: 0;
-            z-index: 1000;
+            left: 0;
+            color: white;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 100%;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
 
         /* Hero Section */
-        .hero {
-            padding: 120px 5% 60px;
-            background: linear-gradient(45deg, #f3f4f6, #fff);
+        .main-content {
+            margin-left: 270px;
+            padding: 3rem;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: #333;
             margin-bottom: 1rem;
             line-height: 1.2;
@@ -52,6 +72,7 @@
 
         .hero p {
             color: #666;
+            font-size: 1.5rem;
             line-height: 1.6;
             max-width: 800px;
             margin: 0 auto 2rem;
@@ -60,20 +81,25 @@
         .cta-button {
             background-color: #FF6B00;
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.5rem 3rem;
             border: none;
-            border-radius: 25px;
-            font-size: 1.1rem;
+            border-radius: 30px;
+            font-size: 1.5rem;
             cursor: pointer;
             margin: 2rem 0;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #e65a00;
         }
 
         /* Platform Grid */
         .platforms {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
             padding: 2rem 5%;
             max-width: 1200px;
             margin: 0 auto;
@@ -81,11 +107,13 @@
 
         .platform-item {
             background-color: #f8f9fa;
-            padding: 1rem;
-            border-radius: 10px;
+            padding: 2rem;
+            border-radius: 15px;
             text-align: center;
             font-weight: bold;
+            font-size: 1.5rem;
             color: #444;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         /* WA Button */
@@ -95,23 +123,50 @@
             right: 2rem;
             background-color: #25D366;
             color: white;
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 50px;
             display: flex;
             align-items: center;
             gap: 0.5rem;
             text-decoration: none;
+            font-size: 1.5rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         /* Mobile Styles */
         @media (max-width: 768px) {
+            .navbar {
+                width: 100%;
+                height: auto;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1rem;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+            }
+
             .nav-links {
+                flex-direction: row;
+                gap: 1rem;
                 display: none;
             }
 
-            .hero h1 {
+            .menu-toggle {
+                display: block;
                 font-size: 2rem;
+                cursor: pointer;
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding-top: 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
             }
 
             .platforms {
@@ -121,7 +176,7 @@
             .wa-button {
                 bottom: 1rem;
                 right: 1rem;
-                font-size: 0.9rem;
+                font-size: 1.2rem;
             }
         }
 
@@ -133,8 +188,10 @@
     </style>
 </head>
 <body>
+
     <nav class="navbar">
-        <div class="logo">MOTOR GLOW</div>
+        <div class="logo">4techworks</div>
+        <button class="menu-toggle">☰</button>
         <div class="nav-links">
             <a href="#products">Products</a>
             <a href="#partners">Our Partners</a>
@@ -143,14 +200,15 @@
             <a href="#careers">Careers</a>
             <a href="#news">News</a>
         </div>
-        <button class="menu-toggle">☰</button>
     </nav>
 
-    <section class="hero">
-        <h1>Motor Makin Glowing,<br>Jadi Pede dibawa Riding</h1>
-        <p>Selalu keliatan kinclong, terjangkau, pemakaian mudah, apalagi formula cairannya tahan lama, merawat motor jadi ngga ribet dan tak habis banyak. Dengan produk Kilap Premium yang beragam, bikin motormu jadi anti kusam.</p>
-        <button class="cta-button">BELI DISINI</button>
-        
+    <div class="main-content">
+        <section class="hero">
+            <h1>Motor Makin Glowing,<br>Jadi Pede dibawa Riding</h1>
+            <p>Selalu keliatan kinclong, terjangkau, pemakaian mudah, apalagi formula cairannya tahan lama, merawat motor jadi ngga ribet dan tak habis banyak. Dengan produk Kilap Premium yang beragam, bikin motormu jadi anti kusam.</p>
+            <button class="cta-button">BELI DISINI</button>
+        </section>
+
         <div class="platforms">
             <div class="platform-item">Shopee</div>
             <div class="platform-item">Tokopedia</div>
@@ -159,7 +217,7 @@
             <div class="platform-item">Bukalapak</div>
             <div class="platform-item">Blibli</div>
         </div>
-    </section>
+    </div>
 
     <a href="https://wa.me/628xxxxxx" class="wa-button">
         <span>WA Admin</span>
@@ -183,5 +241,6 @@
             }
         });
     </script>
+
 </body>
 </html>
