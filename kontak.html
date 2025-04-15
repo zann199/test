@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Kilap Premium</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<style>
+    /* Contact Section */
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row tables {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row table {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row table {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+
+.contact .row tble .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+}
+
+/* Bagian utama */
+.contact-section {
+    padding: 100px 20px;
+}
+
+.contact-section h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-section h2 span {
+    color: #f4b400; /* Warna emas */
+}
+
+.contact-section p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Map Styling */
+.map iframe {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Tabel Styling */
+.contact-info {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    width: 400px;
+}
+
+.contact-info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contact-info th, .contact-info td {
+    padding: 12px;
+    text-align: left;
+}
+
+.contact-info th {
+    background: #333;
+    color: #f4b400;
+}
+
+.contact-info tr:nth-child(even) {
+    background: #2a2a2a;
+}
+
+.contact-info td {
+    border-bottom: 1px solid #444;
+}
+
+.contact-info a {
+    color: #4fa3ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #f4b400;
+    text-decoration: underline;
+}
+</style>
+    <header>
+        <nav>
+            <div class="logo">4techworks</div>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+<div>
+    <section class="contact-section" id="contact">
+       <h2><span>Kontak</span> Kami</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Veritatis, provident.</p>
+
+        <div class="container">
+            <div class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63388.919709927476!2d107.56075317069386!3d-6.9034495263893355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7c6b6937173%3A0x401e8f1fc28dc40!2sBandung!5e0!3m2!1sen!2sid!4v1700000000000"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="contact-info">
+                <table>
+                    <tr>
+                            <th>Nama</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tokopedia</td>
+                            <td><a href="https://www.tokopedia.com" target="_blank">4techworks</a></td>
+                        </tr>
+                        <tr>
+                            <td>Tiktok Shop</td>
+                            <td><a href="https://www.tiktok.com/shop" target="_blank">4techworks</a></td>
+                        </tr>
+                        <tr>
+                            <td>Shopee</td>
+                            <td><a href="https://shopee.co.id/4techworks?utm_source=website" target="_blank">4techworks</a></td>
+
+                        </tr>
+                        <tr>
+                            <td>Lazada</td>
+                            <td><a href="https://s.lazada.co.id/s.Ck8CK?dsource=share&laz_share_info=837162668_100_1600_0_837164668_null&laz_token=b694ee926fa778ca2af738bf4db7dae6" target="_blank">4techworks</a></td>
+                        </tr>
+                        <tr>
+                            <td>Tiktok</td>
+                            <td><a href="https://www.tiktok.com/@4techworks?_t=ZS-8u9CvFnWFco&_r=1" target="_blank">4techworks</a></td>
+                        </tr>
+                        <tr>
+                            <td>Instagram</td>
+                            <td><a href="https://www.instagram.com/4techworks?igsh=MW40bjN6NnNzdW4xNA%3D%3D&utm_source=qr" target="_blank">4techworks</a></td>
+                        </tr>
+                        <tr>
+                            <td>WhatsApp</td>
+                            <td><a href="https://wa.me/6285173249232" target="_blank">4techworks</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-section brand">
+            <img src="Image/logo.png" alt="Kilap Premium Logo">
+            <p>PT. RAS Otomasi Indonesia</p>
+            <hr>
+            <p>#RevitalizeYourRide</p>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Office</h4>
+                <p>4techworks</p>
+                <p>Condet, Keramat Jati</p>
+                <p>Jakarta Timur, Indonesia</p>
+                <a href="#">Cari di Peta ↗</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Our Contact</h4>
+                <p>085173249232</p>
+                <a href="#">Whatsapp (Fauzan) ↗</a>
+                <p> <a href="#">For Collaboration</a> </p>
+                <a href="#">Email us ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Copyright 4techworks. All rights reserved</p>
+    </div>
+
+    <a href="https://wa.me/6285173249232" class="whatsapp-float">
+        <img src="Image/wa.png" alt="Chat WhatsApp">
+        <span>Need Help? Chat <b>with us</b></span>
+    </a>
+</footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
